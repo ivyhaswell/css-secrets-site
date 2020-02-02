@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { Chapter1Component } from './chapter1/chapter1.component';
+import { CurrentColorComponent } from './chapter1/current-color/current-color.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    Chapter1Component
+    Chapter1Component,
+    CurrentColorComponent
   ],
   imports: [
     BrowserModule,

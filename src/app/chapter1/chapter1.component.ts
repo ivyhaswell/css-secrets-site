@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Chapter1Component implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+
+  changeColor(color) {
+
   }
 
 }

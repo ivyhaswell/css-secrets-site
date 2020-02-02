@@ -1,0 +1,13 @@
+<div nz-row>
+    <div nz-col nzSpan="5">
+        <div class="cube" [ngStyle]="{color: cubeColor }">
+            text
+        </div>
+    </div>
+    <div nz-col nzSpan="19">
+        <nz-radio-group [(ngModel)]="cubeColor">
+            <label [ngStyle]="{color: color}" *ngFor="let color of defaultColors" nz-radio
+                [nzValue]="color">{{color}}</label>
+        </nz-radio-group>
+    </div>
+</div>
