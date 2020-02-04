@@ -3635,6 +3635,16 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+highlight.js@*:
+  version "9.18.1"
+  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
+  integrity sha1-7SGqAB/mJSuxCj121HVzxlOf4Tw=
+
+highlightjs-line-numbers.js@*:
+  version "2.7.0"
+  resolved "https://registry.npm.taobao.org/highlightjs-line-numbers.js/download/highlightjs-line-numbers.js-2.7.0.tgz#b202f7dc547cb9ab64d8b3ad571d834817815bdf"
+  integrity sha1-sgL33FR8uatk2LOtVx2DSBeBW98=
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/hmac-drbg/download/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -5059,6 +5069,15 @@ ng-zorro-antd@^8.5.2:
     "@angular/cdk" "^8.0.0"
     "@ant-design/icons-angular" "^8.0.2"
     date-fns "^1.30.1"
+    tslib "^1.9.0"
+
+ngx-highlightjs@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npm.taobao.org/ngx-highlightjs/download/ngx-highlightjs-4.0.2.tgz#d0b2578894093cdff8006111037d5fd953cb893b"
+  integrity sha1-0LJXiJQJPN/4AGERA31f2VPLiTs=
+  dependencies:
+    highlight.js "*"
+    highlightjs-line-numbers.js "*"
     tslib "^1.9.0"
 
 nice-try@^1.0.4:

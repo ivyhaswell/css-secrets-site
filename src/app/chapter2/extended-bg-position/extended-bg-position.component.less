@@ -1,0 +1,32 @@
+.container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .cube{
+        margin-left: 50px;
+        width: 200px;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        color: white;
+        background-size: 34px 71px;
+    }
+}
+
+
+.cube1{
+    background: url(src/assets/treble-clef.png)  no-repeat #58a;
+    background-position: right 20px bottom 20px;
+}
+
+.cube2{
+    background: url(src/assets/treble-clef.png)  no-repeat #58a bottom right;
+    background-origin: content-box;
+    padding: 20px;
+}
+
+.cube3{
+    background: url(src/assets/treble-clef.png)  no-repeat #58a;
+    background-position: calc(100% - 20px) calc(100% - 20px);
+}
