@@ -1,0 +1,42 @@
+.cube {
+    background-color: #fb3;
+    width           : 120px;
+    height          : 80px;
+}
+
+/* 通常情况下都是相邻的两侧投影，这个好解决 */
+.cube1 {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 将元素背景设置为transparent就会发现，投影其实并不在元素下方，而是和原始元素的交集部分都被切掉了 */
+.cube2 {
+    box-shadow      : 4px 4px 4px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+}
+
+/* 这一点和text-shadow不一样 */
+.cube3 {
+    background-color: transparent;
+}
+
+.cube3 .text {
+    font-size  : 32px;
+    margin     : 0 6px;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+    color      : #666;
+}
+
+.cube3 .text:nth-child(2) {
+    color: transparent;
+}
+
+/* 如果只想要单侧的投影，可以用到box-shadow的第四个长度参数，扩散半径，这个参数可以根据指定的值扩大或缩小投影的尺寸。 */
+.cube4 {
+    box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* 邻边的投影很简单，那么相对的两条边的投影怎么做呢？答案就是来两个投影 */
+.cube5 {
+    box-shadow: -8px 0 4px -4px rgba(0, 0, 0, 0.5), 8px 0 4px -4px rgba(0, 0, 0, 0.5);
+}

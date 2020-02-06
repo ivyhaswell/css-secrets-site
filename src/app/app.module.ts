@@ -21,7 +21,6 @@ import { InnerRoundingComponent } from './chapter2/inner-rounding/inner-rounding
 import { StripesBackgroundComponent } from './chapter2/stripes-background/stripes-background.component';
 import { ComplexBackgroundPatternsComponent } from './chapter2/complex-background-patterns/complex-background-patterns.component';
 import { PseudoRandomBackgroundsComponent } from './chapter2/pseudo-random-backgrounds/pseudo-random-backgrounds.component';
-import { CubeContainerDirective } from './directives/cube-container.directive';
 import { ContinuousImageBordersComponent } from './chapter2/continuous-image-borders/continuous-image-borders.component';
 import { Chapter3Component } from './chapter3/chapter3.component';
 import { FlexibleEllipsesComponent } from './chapter3/flexible-ellipses/flexible-ellipses.component';
@@ -29,7 +28,10 @@ import { ParallelogramsComponent } from './chapter3/parallelograms/parallelogram
 import { DiamondImagesComponent } from './chapter3/diamond-images/diamond-images.component';
 import { CutoutCornersComponent } from './chapter3/cutout-corners/cutout-corners.component';
 import { TrapezoidTabsComponent } from './chapter3/trapezoid-tabs/trapezoid-tabs.component';
-import { SimplePieChartsComponent } from './chapter3/simple-pie-charts/simple-pie-charts.component'
+import { SimplePieChartsComponent } from './chapter3/simple-pie-charts/simple-pie-charts.component';
+import { Chapter4Component } from './chapter4/chapter4.component';
+import { OneSidedShadowsComponent } from './chapter4/one-sided-shadows/one-sided-shadows.component';
+import { IrregularDropShadowsComponent } from './chapter4/irregular-drop-shadows/irregular-drop-shadows.component'
 
 registerLocaleData(en);
 
@@ -56,7 +58,6 @@ export function getHighlightLanguages() {
     StripesBackgroundComponent,
     ComplexBackgroundPatternsComponent,
     PseudoRandomBackgroundsComponent,
-    CubeContainerDirective,
     ContinuousImageBordersComponent,
     Chapter3Component,
     FlexibleEllipsesComponent,
@@ -64,7 +65,10 @@ export function getHighlightLanguages() {
     DiamondImagesComponent,
     CutoutCornersComponent,
     TrapezoidTabsComponent,
-    SimplePieChartsComponent
+    SimplePieChartsComponent,
+    Chapter4Component,
+    OneSidedShadowsComponent,
+    IrregularDropShadowsComponent
   ],
   imports: [
     BrowserModule,

@@ -197,7 +197,7 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@~8.2.14":
+"@angular/language-service@^8.2.14":
   version "8.2.14"
   resolved "https://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-8.2.14.tgz#e18b27a6841577ce489ad31540150da5a444ca37"
   integrity sha1-4YsnpoQVd85ImtMVQBUNpaREyjc=
