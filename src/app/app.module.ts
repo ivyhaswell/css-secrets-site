@@ -31,7 +31,8 @@ import { TrapezoidTabsComponent } from './chapter3/trapezoid-tabs/trapezoid-tabs
 import { SimplePieChartsComponent } from './chapter3/simple-pie-charts/simple-pie-charts.component';
 import { Chapter4Component } from './chapter4/chapter4.component';
 import { OneSidedShadowsComponent } from './chapter4/one-sided-shadows/one-sided-shadows.component';
-import { IrregularDropShadowsComponent } from './chapter4/irregular-drop-shadows/irregular-drop-shadows.component'
+import { IrregularDropShadowsComponent } from './chapter4/irregular-drop-shadows/irregular-drop-shadows.component';
+import { ColorTintingComponent } from './chapter4/color-tinting/color-tinting.component';
 
 registerLocaleData(en);
 
@@ -68,7 +69,8 @@ export function getHighlightLanguages() {
     SimplePieChartsComponent,
     Chapter4Component,
     OneSidedShadowsComponent,
-    IrregularDropShadowsComponent
+    IrregularDropShadowsComponent,
+    ColorTintingComponent,
   ],
   imports: [
     BrowserModule,

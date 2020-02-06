@@ -1,0 +1,165 @@
+.cube {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    height        : auto;
+
+    img {
+        border-radius: 50%;
+        height       : 120px;
+        width        : 120px;
+        transition   : 0.5s filter;
+
+        &:hover,
+        &:focus {
+            filter: none;
+        }
+    }
+
+    p {
+        margin-top: 8px;
+    }
+}
+
+/* 直接蒙一层纯色背景，效果不太好 */
+.cube1 {
+    .img-wrap {
+        position: relative;
+
+        &::before {
+            border-radius   : 50%;
+            content         : '';
+            position        : absolute;
+            top             : 0;
+            left            : 0;
+            width           : 120px;
+            height          : 100%;
+            background-color: rgba(51, 187, 127, 0.5);
+        }
+    }
+}
+
+/* 
+用filter来做:
+[blur]       (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur)
+[brightness] (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness)
+[contrast]   (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/contrast)
+[drop-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow)
+[grayscale]  (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/grayscale)
+[hue-rotate] (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/hue-rotate)
+[invert]     (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert)
+[opacity]    (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/opacity)
+[saturate]   (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/saturate)
+[sepia]      (https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/sepia)
+ */
+
+/* blur: 对图像应用高斯模糊 */
+.blur {
+    img {
+        filter: blur(2px);
+    }
+}
+
+/* brightness: 调整图像亮度 */
+.brightness {
+    img {
+        filter: brightness(2);
+    }
+}
+
+/* contrast: 调整对比度 */
+.contrast {
+    img {
+        filter: contrast(2);
+    }
+}
+
+/* drop-shadow: 添加阴影效果 */
+.drop-shadow {
+    img {
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+    }
+}
+
+/* grayscale: 调整灰阶 */
+.grayscale {
+    img {
+        filter: grayscale(1);
+    }
+}
+
+/* hue-rotate: 旋转色调 */
+.hue-rotate {
+    img {
+        filter: hue-rotate(90deg);
+    }
+}
+
+/* invert: 反色 */
+.invert {
+    img {
+        filter: invert(1);
+    }
+}
+
+/* opacity: 透明度 */
+.opacity {
+    img {
+        filter: opacity(0.2);
+    }
+}
+
+/* saturate: 饱和度 */
+.saturate {
+    img {
+        filter: saturate(4);
+    }
+}
+
+/* sepia: 将输入图像转换为棕褐色，使其显得更温暖，更黄/棕 */
+.sepia {
+    img {
+        filter: sepia(1);
+    }
+}
+
+/* 
+mix-blend-mode 设置元素的内容应如何与元素父元素和元素背景的内容融合
+取值有  : normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity
+https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode
+这里用luminosity，这种模式会保留上层元素的hsl亮度信息，并从它的下层吸取色相饱和度信息
+使用mix-blend-mode没有渐变
+ */
+.mix-blend-mode {
+    a {
+        background   : hsl(166, 100%, 50%);
+        border-radius: 50%;
+    }
+
+    img {
+        mix-blend-mode: luminosity;
+    }
+}
+
+/*
+background-blend-mode 设置元素的背景图像如何彼此融合以及如何与元素的背景色融合。
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode 
+*/
+.background-blend-mode {
+    .img-container {
+        width                : 120px;
+        height               : 120px;
+        border-radius        : 50%;
+        background-size      : cover;
+        background-position  : center;
+        background-repeat    : no-repeat;
+        background-color     : hsl(166, 100%, 50%);
+        background-blend-mode: luminosity;
+        transition           : 0.5s background-color;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+}
