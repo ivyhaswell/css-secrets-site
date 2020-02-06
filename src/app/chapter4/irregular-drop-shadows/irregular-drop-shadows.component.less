@@ -1,5 +1,59 @@
-.cube {}
+.cube {
+    background-color: coral;
+    padding         : 12px 20px;
+    font-size       : 24px;
+    margin          : 20px 40px;
+    color           : white;
+}
+
+/* 
+部分使用了伪元素，dotted边框，背景折角，clip-path等效果的元素，它们的box-shadow看起来会比较尴尬
+ */
+.shadow {
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+使用filter中的drop-shadow来做，这个方法不支持inset和扩张半径，其他和box-shadow一样 
+虽然对clip-path依然没办法，但其他几种情况看起来效果都不错
+*/
+.filter-shadow {
+    filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.5));
+}
 
 .bubble {
-    background-color: #f53;
+    position     : relative;
+    border-radius: 8px;
+
+    &::before {
+        content          : '';
+        border           : 10px solid transparent;
+        border-left-color: coral;
+        position         : absolute;
+        top              : 50%;
+        right            : 0;
+        transform        : translate(100%, -50%);
+    }
+}
+
+.dotted-border {
+    background-color: transparent;
+    border          : 4px dotted coral;
+    color           : coral;
+}
+
+.cutout-corners {
+    background: linear-gradient(135deg, transparent 20px, coral 0),
+        linear-gradient(-135deg, transparent 20px, coral 0),
+        linear-gradient(-45deg, transparent 20px, coral 0),
+        linear-gradient(45deg, transparent 20px, coral 0);
+    background-size    : 50% 50%;
+    background-position: top left, top right, bottom right, bottom left;
+    background-repeat  : no-repeat;
+}
+
+.clip-path {
+    clip-path  : polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    text-align : center;
+    line-height: 100px;
 }
