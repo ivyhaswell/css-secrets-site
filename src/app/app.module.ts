@@ -37,6 +37,7 @@ import { FrostedGlassEffectComponent } from './chapter4/frosted-glass-effect/fro
 import { FrostedCornerEffectComponent } from './chapter4/frosted-corner-effect/frosted-corner-effect.component';
 import { Chapter5Component } from './chapter5/chapter5.component';
 import { HyphenationComponent } from './chapter5/hyphenation/hyphenation.component';
+import { InsertingLineBreaksComponent } from './chapter5/inserting-line-breaks/inserting-line-breaks.component';
 
 registerLocaleData(en);
 
@@ -79,6 +80,7 @@ export function getHighlightLanguages() {
     FrostedCornerEffectComponent,
     Chapter5Component,
     HyphenationComponent,
+    InsertingLineBreaksComponent,
   ],
   imports: [
     BrowserModule,

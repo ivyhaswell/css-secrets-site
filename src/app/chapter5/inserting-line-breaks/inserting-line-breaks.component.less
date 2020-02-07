@@ -1,0 +1,52 @@
+.cube {
+    width  : 400px;
+    height : 180px;
+    border : 1px solid rgba(0, 0, 0, 0.7);
+    padding: 12px 20px;
+
+    dl {
+        dd {
+            margin     : 0;
+            font-weight: bold;
+        }
+    }
+}
+
+/* 
+    想要实现一个dt和一个dd一排，可以在每个dd后面插入一个br，也可以用CSS解决，
+    比如0x000A这个Unicode字符是专门代表换行符的，可以用来作为dd的after伪元素
+    的content。
+*/
+.cube2 {
+
+    dd,
+    dt {
+        display: inline;
+    }
+
+    dd::after {
+        content: '\A';
+        /* 在HTML中，换行符会和相邻的空白符合并，如果希望保留，就可以设置使用white-space为pre */
+        white-space: pre;
+    }
+}
+
+/* 但上面的方法在一个dt后跟多个dd的时候显示又不正确，可以考虑将换行放在dt前面 */
+.cube3 {
+
+    dd,
+    dt {
+        display: inline;
+    }
+
+    /* 用dd+dt可以避免第一行就换行了 */
+    dd+dt::before {
+        content    : '\A';
+        white-space: pre;
+    }
+
+    /* 当前面有另一个dd的时候在前面加一个逗号 */
+    dd+dd::before {
+        content: ', ';
+    }
+}
