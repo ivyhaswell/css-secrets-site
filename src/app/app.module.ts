@@ -35,6 +35,8 @@ import { IrregularDropShadowsComponent } from './chapter4/irregular-drop-shadows
 import { ColorTintingComponent } from './chapter4/color-tinting/color-tinting.component';
 import { FrostedGlassEffectComponent } from './chapter4/frosted-glass-effect/frosted-glass-effect.component';
 import { FrostedCornerEffectComponent } from './chapter4/frosted-corner-effect/frosted-corner-effect.component';
+import { Chapter5Component } from './chapter5/chapter5.component';
+import { HyphenationComponent } from './chapter5/hyphenation/hyphenation.component';
 
 registerLocaleData(en);
 
@@ -75,6 +77,8 @@ export function getHighlightLanguages() {
     ColorTintingComponent,
     FrostedGlassEffectComponent,
     FrostedCornerEffectComponent,
+    Chapter5Component,
+    HyphenationComponent,
   ],
   imports: [
     BrowserModule,

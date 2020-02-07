@@ -1,0 +1,22 @@
+.cube {
+    border       : 1px solid rgba(0, 0, 0, 0.75);
+    padding      : 12px 20px;
+    border-radius: 6px;
+    height       : auto;
+}
+
+/* 用text-align做字体两端对齐，结果看起来比较一言难尽... */
+.cube1 {
+    text-align: justify;
+}
+
+/* 
+CSS3引入了一个新属性hyphens，接受none/manual/auto 
+firefox支持直接使用auto，chrome暂时还不支持
+*/
+
+.cube2 {
+    p {
+        hyphens: auto;
+    }
+}
