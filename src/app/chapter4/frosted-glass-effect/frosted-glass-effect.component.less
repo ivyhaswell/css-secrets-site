@@ -1,0 +1,76 @@
+.cube {
+    width          : auto;
+    height         : auto;
+    padding        : 30px 50px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    background     : url(src/assets/tower.jpg);
+    background-size: cover;
+    font-family    : Baskerville, Palatino, serif;
+    color          : black;
+
+    main {
+        width        : 300px;
+        border-radius: 10px;
+
+        blockquote {
+            padding   : 20px;
+            font-style: italic;
+
+            cite {
+                font-style: normal;
+            }
+        }
+    }
+}
+
+/* 来一层半透明背景，透明度30%，文字有点看不清 */
+.cube1 {
+    main {
+        background: hsla(0, 0%, 100%, 0.3);
+    }
+}
+
+/* 透明度70%，文字可读性变好了但效果不那么生动 */
+.cube2 {
+    main {
+        background: hsla(0, 0%, 100%, 0.7);
+    }
+}
+
+/* 添加一个为元素在下面，然后用filter做blur处理 */
+.cube3 {
+    main {
+        position  : relative;
+        overflow  : hidden;
+        background: hsla(0, 0%, 100%, 0.25) border-box;
+        box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.3) inset,
+            0 0.5em 1em rgba(0, 0, 0, 0.6);
+        text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.3);
+
+        &::before {
+            content   : '';
+            background: url(src/assets/tower.jpg) 0 / cover;
+            /* 
+                blur滤镜边缘会有糊，所以让伪元素向外扩大加上宿主元素的overflow hidden做裁切。
+                原书中是增加一个负值的margin，但是这样会有一个问题就是背景会有一些对不齐，原书
+                中设background-attachment为fixed来解决，但这不适用于页面中有多个组件的情况。
+                因此在这里改为定位向外延伸。
+            */
+            @blurpixel: 20px;
+            position  : absolute;
+            top       : -@blurpixel;
+            left      : -@blurpixel;
+            bottom    : -@blurpixel;
+            right     : -@blurpixel;
+            filter    : blur(@blurpixel);
+            // margin : -20px;
+        }
+
+        blockquote {
+            position: relative;
+            z-index : 100;
+        }
+    }
+}
