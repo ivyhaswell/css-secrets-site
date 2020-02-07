@@ -1,0 +1,46 @@
+.cube {
+    background: #58a;
+    padding   : 12px 20px;
+    color     : white;
+}
+
+/* 简单的45度折角 */
+.cube1 {
+    background: linear-gradient(-135deg, transparent 50%, rgba(0, 0, 0, 0.4) 0),
+        linear-gradient(-135deg, transparent 15px, #58a 0);
+    background-size    : 21px 21px, 100% 100%;
+    background-repeat  : no-repeat;
+    background-position: top right;
+}
+
+/* 60度，三角函数算一下 */
+.cube2 {
+    background: linear-gradient(to left bottom, transparent 15px, rgba(0, 0, 0, 0.4) 15px, rgba(0, 0, 0, 0.4) 30px),
+        linear-gradient(-150deg, transparent 15px, #58a 0);
+    background-size    : 30px 17.3px, 100% 100%;
+    background-repeat  : no-repeat;
+    background-position: top right;
+}
+
+/* 仿真一点 */
+.cube3 {
+    background   : linear-gradient(-150deg, transparent 15px, #58a 0);
+    position     : relative;
+    border-radius: 5px;
+
+    &::before {
+        content : '';
+        position: absolute;
+        /* 要做出真实的折角效果，调整一下思路，做一个与折角对称的背景，旋转一下与边缘贴合 */
+        top                       : 17.3px;
+        right                     : 0;
+        background                : linear-gradient(to left top, rgba(0, 0, 0, 0.4) 15px, transparent 0);
+        width                     : 30px;
+        height                    : 17.3px;
+        transform                 : rotate(60deg);
+        transform-origin          : top right;
+        border-bottom-right-radius: inherit;
+        /* 加点阴影，效果真实一点 */
+        box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.15);
+    }
+}

@@ -34,6 +34,7 @@ import { OneSidedShadowsComponent } from './chapter4/one-sided-shadows/one-sided
 import { IrregularDropShadowsComponent } from './chapter4/irregular-drop-shadows/irregular-drop-shadows.component';
 import { ColorTintingComponent } from './chapter4/color-tinting/color-tinting.component';
 import { FrostedGlassEffectComponent } from './chapter4/frosted-glass-effect/frosted-glass-effect.component';
+import { FrostedCornerEffectComponent } from './chapter4/frosted-corner-effect/frosted-corner-effect.component';
 
 registerLocaleData(en);
 
@@ -73,6 +74,7 @@ export function getHighlightLanguages() {
     IrregularDropShadowsComponent,
     ColorTintingComponent,
     FrostedGlassEffectComponent,
+    FrostedCornerEffectComponent,
   ],
   imports: [
     BrowserModule,
