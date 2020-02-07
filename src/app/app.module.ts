@@ -40,6 +40,7 @@ import { HyphenationComponent } from './chapter5/hyphenation/hyphenation.compone
 import { InsertingLineBreaksComponent } from './chapter5/inserting-line-breaks/inserting-line-breaks.component';
 import { ZebraStripedTextLinesComponent } from './chapter5/zebra-striped-text-lines/zebra-striped-text-lines.component';
 import { AdjustingTabWidthComponent } from './chapter5/adjusting-tab-width/adjusting-tab-width.component';
+import { LigaturesComponent } from './chapter5/ligatures/ligatures.component';
 
 registerLocaleData(en);
 
@@ -85,6 +86,7 @@ export function getHighlightLanguages() {
     InsertingLineBreaksComponent,
     ZebraStripedTextLinesComponent,
     AdjustingTabWidthComponent,
+    LigaturesComponent,
   ],
   imports: [
     BrowserModule,
