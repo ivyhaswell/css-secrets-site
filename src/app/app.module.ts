@@ -38,6 +38,7 @@ import { FrostedCornerEffectComponent } from './chapter4/frosted-corner-effect/f
 import { Chapter5Component } from './chapter5/chapter5.component';
 import { HyphenationComponent } from './chapter5/hyphenation/hyphenation.component';
 import { InsertingLineBreaksComponent } from './chapter5/inserting-line-breaks/inserting-line-breaks.component';
+import { ZebraStripedTextLinesComponent } from './chapter5/zebra-striped-text-lines/zebra-striped-text-lines.component';
 
 registerLocaleData(en);
 
@@ -81,6 +82,7 @@ export function getHighlightLanguages() {
     Chapter5Component,
     HyphenationComponent,
     InsertingLineBreaksComponent,
+    ZebraStripedTextLinesComponent,
   ],
   imports: [
     BrowserModule,

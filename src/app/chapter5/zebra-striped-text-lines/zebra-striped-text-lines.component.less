@@ -1,0 +1,25 @@
+.cube {
+    border    : 1px solid rgba(0, 0, 0, 0.5);
+    padding   : 12px 20px;
+    width     : 280px;
+    height    : auto;
+    background: beige;
+
+    p {
+        margin: 0;
+    }
+}
+
+.cube1 {
+    line-height     : 1.4;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%, transparent 0);
+    background-size : 100% 2.8em;
+}
+
+.cube2 {
+    line-height     : 1.4;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 50%, transparent 0);
+    background-size : 100% 2.8em;
+    /* 让背景以content-box的外沿为基准，避免因为padding导致的错位情况 */
+    background-origin: content-box;
+}
