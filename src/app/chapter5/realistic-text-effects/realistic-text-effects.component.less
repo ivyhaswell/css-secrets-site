@@ -1,0 +1,119 @@
+.cube {
+    padding: 12px 20px;
+    height : auto;
+}
+
+/* 凸版印刷效果，核心是文字和背景的颜色与文字的投影，需花时间微调 */
+.cube1 {
+    /* 比较好选的方案就是用hsl定义颜色，只需要改变最后的亮度值 */
+    background-color: hsl(210, 13%, 40%);
+    color           : hsl(210, 13%, 75%);
+    text-shadow     : 0 -1px 1px black;
+}
+
+/* 空心字效果，主要是做文字描边 */
+.cube2 {
+    text-align      : center;
+    font-size       : 40px;
+    background-color: deeppink;
+    color           : white;
+    /* 每个方向都有一个投影 */
+    text-shadow: 1px 1px black, -1px -1px black,
+        -1px 1px black, 1px -1px black, ;
+}
+
+/* 叠加多个扩散投影 */
+.cube3 {
+    text-align      : center;
+    font-size       : 40px;
+    background-color: deeppink;
+    color           : white;
+    text-shadow     : 0 0 1px black, 0 0 1px black,
+        0 0 1px black, 0 0 1px black,
+        0 0 1px black, 0 0 1px black;
+}
+
+/* 投影的方法描边小的时候效果还行，但描边变粗后视觉效果不好 */
+.cube4 {
+    text-align      : center;
+    font-size       : 40px;
+    background-color: deeppink;
+    color           : white;
+    text-shadow     : 0 0 3px black, 0 0 3px black,
+        0 0 3px black, 0 0 3px black,
+        0 0 3px black, 0 0 3px black;
+}
+
+/* 用svg来做，效果不错 */
+.cube5 {
+    background-color: deeppink;
+    color           : white;
+    font-size       : 40px;
+    text-align      : center;
+    letter-spacing  : 1.2;
+
+    text {
+        fill: currentColor;
+    }
+
+    svg {
+        overflow: visible;
+    }
+
+    use {
+        stroke         : black;
+        stroke-width   : 6;
+        stroke-linejoin: round;
+    }
+}
+
+/* 发光效果，通过几层重叠的text-shadow实现，不需要偏移量，颜色和文字一致即可 */
+.cube6 {
+    font-size       : 40px;
+    text-align      : center;
+    background-color: #203;
+    color           : #ffc;
+    text-shadow     : 0 0 .1em, 0 0 .3em;
+    /* 加个小动画 */
+    animation: disappear 0.3s linear infinite;
+
+    &:hover {
+        color: transparent;
+    }
+
+    @keyframes disappear {
+        50% {
+            color      : rgba(255, 255, 255, 0.2);
+            text-shadow: 0 0 0, 0 0 0;
+        }
+    }
+}
+
+/* 
+    文字凸起效果，使用一长串累加的投影，不设模糊并以1px的跨度逐渐错开，使颜色逐渐变暗，
+    然后在底部加一层强烈模糊的暗投影，从而模拟完整的立体效果
+*/
+.cube7 {
+    font-size       : 40px;
+    background-color: #58a;
+    color           : white;
+    text-align      : center;
+    text-shadow     : 0 1px hsl(0, 0%, 85%),
+        0 2px hsl(0, 0%, 85%),
+        0 3px hsl(0, 0%, 85%),
+        0 4px hsl(0, 0%, 85%),
+        0 5px hsl(0, 0%, 85%),
+        0 5px 10px black;
+}
+
+/* 把投影都设成黑色，并且去掉最底层的投影，模拟一种复古的3d阴影效果 */
+.cube8 {
+    font-size       : 40px;
+    background-color: hsl(0, 50%, 45%);
+    color           : white;
+    text-align      : center;
+    text-shadow     : 1px 1px black, 2px 2px black,
+        3px 3px black, 4px 4px black,
+        5px 5px black, 6px 6px black,
+        7px 7px black, 8px 8px black;
+}

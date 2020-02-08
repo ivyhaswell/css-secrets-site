@@ -43,6 +43,7 @@ import { AdjustingTabWidthComponent } from './chapter5/adjusting-tab-width/adjus
 import { LigaturesComponent } from './chapter5/ligatures/ligatures.component';
 import { FancyAmpersandsComponent } from './chapter5/fancy-ampersands/fancy-ampersands.component';
 import { CustomUnderlinesComponent } from './chapter5/custom-underlines/custom-underlines.component';
+import { RealisticTextEffectsComponent } from './chapter5/realistic-text-effects/realistic-text-effects.component';
 
 registerLocaleData(en);
 
@@ -91,6 +92,7 @@ export function getHighlightLanguages() {
     LigaturesComponent,
     FancyAmpersandsComponent,
     CustomUnderlinesComponent,
+    RealisticTextEffectsComponent,
   ],
   imports: [
     BrowserModule,
