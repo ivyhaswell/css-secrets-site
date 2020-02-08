@@ -48,6 +48,7 @@ import { CircularTextComponent } from './chapter5/circular-text/circular-text.co
 import { Chapter6Component } from './chapter6/chapter6.component';
 import { PickingTheRightCursorComponent } from './chapter6/picking-the-right-cursor/picking-the-right-cursor.component';
 import { ExtendingTheClickableAreaComponent } from './chapter6/extending-the-clickable-area/extending-the-clickable-area.component';
+import { CustomCheckboxesComponent } from './chapter6/custom-checkboxes/custom-checkboxes.component';
 
 registerLocaleData(en);
 
@@ -101,6 +102,7 @@ export function getHighlightLanguages() {
     Chapter6Component,
     PickingTheRightCursorComponent,
     ExtendingTheClickableAreaComponent,
+    CustomCheckboxesComponent,
   ],
   imports: [
     BrowserModule,

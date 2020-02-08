@@ -1,0 +1,66 @@
+/* 自定义复选框 */
+.cube1 {
+    input[type="checkbox"] {
+        position: absolute;
+        /* 不使用display none，因为这样会把它从键盘tab键切换焦点的队列中删除 */
+        clip: rect(0, 0, 0, 0);
+
+        &+label::before {
+            /* 不换行空格 */
+            content         : '\a0';
+            display         : inline-block;
+            vertical-align  : 0;
+            width           : .8em;
+            height          : .8em;
+            margin-right    : .2em;
+            border-radius   : .2em;
+            border-radius   : .2em;
+            background-color: silver;
+            text-indent     : .15em;
+            line-height     : .65em;
+        }
+
+        &:checked+label::before {
+            content         : '\2713';
+            background-color: yellowgreen;
+        }
+
+        /* 聚焦时加个投影 */
+        &:focus+label::before {
+            box-shadow: 0 0 .1em .1em #58a;
+        }
+
+        &:disabled+label::before {
+            background: gray;
+            box-shadow: none;
+            color     : #555;
+        }
+    }
+}
+
+/* 开关式按钮 */
+.cube2 {
+    input[type='checkbox'] {
+        position: absolute;
+        clip    : rect(0, 0, 0, 0);
+
+        &+label {
+            display             : inline-block;
+            padding-inline-start: .3em .5em;
+            background-color    : #ccc;
+            background-image    : linear-gradient(#ddd, #bbb);
+            border              : 1px solid rgba(0, 0, 0, 0.2);
+            border-radius       : .3em;
+            box-shadow          : 0 1px white inset;
+            text-align          : center;
+            text-shadow         : 0 1px 1px white;
+        }
+
+        &:checked+label,
+        &:active+label {
+            box-shadow  : .05em .1em .2em rgba(0, 0, 0, .6) inset;
+            border-color: rgba(0, 0, 0, .3);
+            background  : #bbb;
+        }
+    }
+}
