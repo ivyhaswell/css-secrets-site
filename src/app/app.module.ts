@@ -47,6 +47,7 @@ import { RealisticTextEffectsComponent } from './chapter5/realistic-text-effects
 import { CircularTextComponent } from './chapter5/circular-text/circular-text.component';
 import { Chapter6Component } from './chapter6/chapter6.component';
 import { PickingTheRightCursorComponent } from './chapter6/picking-the-right-cursor/picking-the-right-cursor.component';
+import { ExtendingTheClickableAreaComponent } from './chapter6/extending-the-clickable-area/extending-the-clickable-area.component';
 
 registerLocaleData(en);
 
@@ -99,6 +100,7 @@ export function getHighlightLanguages() {
     CircularTextComponent,
     Chapter6Component,
     PickingTheRightCursorComponent,
+    ExtendingTheClickableAreaComponent,
   ],
   imports: [
     BrowserModule,

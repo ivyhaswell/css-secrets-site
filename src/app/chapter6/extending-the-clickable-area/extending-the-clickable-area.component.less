@@ -1,0 +1,17 @@
+.hover-shadow {
+    &:hover {
+        box-shadow: 0 0 0 1px rgba(00, 0, 0, 0.3) inset,
+            0 .1em .2em -.05em rgba(0, 0, 0, 0.5);
+    }
+}
+
+.button-1 {
+    width        : 120px;
+    height       : 80px;
+    border-radius: 6px;
+    border       : 10px solid transparent;
+    /* 来个阴影 */
+    .hover-shadow;
+    /* background-clip设置为padding-box，否则背景就会延伸到border上 */
+    background-clip: padding-box;
+}
