@@ -44,6 +44,7 @@ import { LigaturesComponent } from './chapter5/ligatures/ligatures.component';
 import { FancyAmpersandsComponent } from './chapter5/fancy-ampersands/fancy-ampersands.component';
 import { CustomUnderlinesComponent } from './chapter5/custom-underlines/custom-underlines.component';
 import { RealisticTextEffectsComponent } from './chapter5/realistic-text-effects/realistic-text-effects.component';
+import { CircularTextComponent } from './chapter5/circular-text/circular-text.component';
 
 registerLocaleData(en);
 
@@ -93,6 +94,7 @@ export function getHighlightLanguages() {
     FancyAmpersandsComponent,
     CustomUnderlinesComponent,
     RealisticTextEffectsComponent,
+    CircularTextComponent,
   ],
   imports: [
     BrowserModule,
