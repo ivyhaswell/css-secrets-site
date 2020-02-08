@@ -14,12 +14,6 @@ import style from './fancy-ampersands.component.less'
       <div class="cube cube3">
         HTML &amp; CSS
       </div>
-      <div class="cube cube4">
-        HTML &amp; CSS
-      </div>
-      <div class="cube cube5">
-        HTML &amp; CSS
-      </div>
     </div>
     <app-highlight-code [code]="code"></app-highlight-code>
   `,

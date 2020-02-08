@@ -42,6 +42,7 @@ import { ZebraStripedTextLinesComponent } from './chapter5/zebra-striped-text-li
 import { AdjustingTabWidthComponent } from './chapter5/adjusting-tab-width/adjusting-tab-width.component';
 import { LigaturesComponent } from './chapter5/ligatures/ligatures.component';
 import { FancyAmpersandsComponent } from './chapter5/fancy-ampersands/fancy-ampersands.component';
+import { CustomUnderlinesComponent } from './chapter5/custom-underlines/custom-underlines.component';
 
 registerLocaleData(en);
 
@@ -89,6 +90,7 @@ export function getHighlightLanguages() {
     AdjustingTabWidthComponent,
     LigaturesComponent,
     FancyAmpersandsComponent,
+    CustomUnderlinesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+.cube {
+    border       : 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    padding      : 12px 20px;
+    height       : auto;
+    width        : 260px;
+    color        : #000;
+}
+
+/* 简单的，直接用text-decoration */
+.cube1 {
+    span {
+        text-decoration: underline;
+    }
+}
+
+/* 也可以用border-bottom自己定义样式 */
+.cube2 {
+    span {
+        border-bottom: 1px solid gray;
+    }
+}
+
+/* 或者用box-shadow */
+.cube3 {
+    span {
+        box-shadow: 0 -1px gray inset;
+    }
+}
+
+/* 万能的linear-gradient */
+.cube4 {
+    span {
+        background         : linear-gradient(gray, gray) no-repeat;
+        background-size    : 100% 1px;
+        background-position: 0 1.15em;
+        /* 给字体加一层白色的阴影，实现下划线跳过字母降部的效果 */
+        text-shadow: 1px 0 white, -1px 0 white;
+    }
+}
+
+/* 尽管本书这么多实现方法可以自定义下划线样式，但其实吧，text-decoration现在已经可以定义样式了 */
+.cube5 {
+    span {
+        text-decoration      : underline;
+        text-decoration-color: gray;
+        text-decoration-style: dashed;
+    }
+}
