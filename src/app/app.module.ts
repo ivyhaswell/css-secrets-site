@@ -46,6 +46,7 @@ import { CustomUnderlinesComponent } from './chapter5/custom-underlines/custom-u
 import { RealisticTextEffectsComponent } from './chapter5/realistic-text-effects/realistic-text-effects.component';
 import { CircularTextComponent } from './chapter5/circular-text/circular-text.component';
 import { Chapter6Component } from './chapter6/chapter6.component';
+import { PickingTheRightCursorComponent } from './chapter6/picking-the-right-cursor/picking-the-right-cursor.component';
 
 registerLocaleData(en);
 
@@ -97,6 +98,7 @@ export function getHighlightLanguages() {
     RealisticTextEffectsComponent,
     CircularTextComponent,
     Chapter6Component,
+    PickingTheRightCursorComponent,
   ],
   imports: [
     BrowserModule,
