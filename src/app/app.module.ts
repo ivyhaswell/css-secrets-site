@@ -41,6 +41,7 @@ import { InsertingLineBreaksComponent } from './chapter5/inserting-line-breaks/i
 import { ZebraStripedTextLinesComponent } from './chapter5/zebra-striped-text-lines/zebra-striped-text-lines.component';
 import { AdjustingTabWidthComponent } from './chapter5/adjusting-tab-width/adjusting-tab-width.component';
 import { LigaturesComponent } from './chapter5/ligatures/ligatures.component';
+import { FancyAmpersandsComponent } from './chapter5/fancy-ampersands/fancy-ampersands.component';
 
 registerLocaleData(en);
 
@@ -87,6 +88,7 @@ export function getHighlightLanguages() {
     ZebraStripedTextLinesComponent,
     AdjustingTabWidthComponent,
     LigaturesComponent,
+    FancyAmpersandsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+.cube {
+    font-size: 30px;
+    font-family: Ampersand,
+        Helvetica,
+        sans-serif;
+}
+
+/* 对&符号用一个span包裹起来，然后对span写样式 */
+.cube2 {
+    .amp {
+        font-family: Baskerville, "Goudy Old Style", Garamond, Palatino, serif;
+        font-style : italic;
+    }
+}
+
+/* 
+    也可以使用font-face指定字体，用unicode-range指定生效的字符，这样就可以对所有的&符号
+    都应用一个指定的字体了（虽然个人感觉不太会出现这种场景）
+ */
+.cube3 {
+    @font-face {
+        font-family: Ampersand;
+        src        : local('Baskerville-Italic'),
+            local('GoudyOldStyleT-Italic'),
+            local('Garamond-Italic'),
+            local('Palatino-Italic');
+        unicode-range: U+26;
+    }
+}
