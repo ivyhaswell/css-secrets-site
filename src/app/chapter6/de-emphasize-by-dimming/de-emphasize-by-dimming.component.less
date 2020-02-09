@@ -1,0 +1,9 @@
+/* 因为antd重置了dialog的样式，所以在这里需要重新设置一下 */
+dialog:not([open]) {
+    display: none;
+}
+
+/* 设置dialog的背景样式 */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
