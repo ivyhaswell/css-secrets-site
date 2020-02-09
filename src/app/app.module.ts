@@ -51,6 +51,7 @@ import { ExtendingTheClickableAreaComponent } from './chapter6/extending-the-cli
 import { CustomCheckboxesComponent } from './chapter6/custom-checkboxes/custom-checkboxes.component';
 import { DeEmphasizeByDimmingComponent } from './chapter6/de-emphasize-by-dimming/de-emphasize-by-dimming.component';
 import { DeEmphasizeByBlurringComponent } from './chapter6/de-emphasize-by-blurring/de-emphasize-by-blurring.component';
+import { ScrollingHintsComponent } from './chapter6/scrolling-hints/scrolling-hints.component';
 
 registerLocaleData(en);
 
@@ -107,6 +108,7 @@ export function getHighlightLanguages() {
     CustomCheckboxesComponent,
     DeEmphasizeByDimmingComponent,
     DeEmphasizeByBlurringComponent,
+    ScrollingHintsComponent,
   ],
   imports: [
     BrowserModule,
