@@ -52,6 +52,7 @@ import { CustomCheckboxesComponent } from './chapter6/custom-checkboxes/custom-c
 import { DeEmphasizeByDimmingComponent } from './chapter6/de-emphasize-by-dimming/de-emphasize-by-dimming.component';
 import { DeEmphasizeByBlurringComponent } from './chapter6/de-emphasize-by-blurring/de-emphasize-by-blurring.component';
 import { ScrollingHintsComponent } from './chapter6/scrolling-hints/scrolling-hints.component';
+import { InteractiveImageComparisonComponent } from './chapter6/interactive-image-comparison/interactive-image-comparison.component';
 
 registerLocaleData(en);
 
@@ -109,6 +110,7 @@ export function getHighlightLanguages() {
     DeEmphasizeByDimmingComponent,
     DeEmphasizeByBlurringComponent,
     ScrollingHintsComponent,
+    InteractiveImageComparisonComponent,
   ],
   imports: [
     BrowserModule,

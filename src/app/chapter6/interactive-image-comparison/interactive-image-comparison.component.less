@@ -1,0 +1,52 @@
+.container {
+    flex-direction: column;
+}
+
+.image-slider {
+    position: relative;
+    display : inline-block;
+    margin  : 20px;
+
+    .cover {
+        position : absolute;
+        top      : 0;
+        left     : 0;
+        bottom   : 0;
+        width    : 50%;
+        overflow : hidden;
+        max-width: 100%;
+    }
+
+    img {
+        display: block;
+        /* 防止用户误拖选图片 */
+        user-select: none;
+    }
+}
+
+.slider1 {
+    .cover {
+        /* 设置水平方向可以resize */
+        resize: horizontal;
+
+        /* 添加一个手柄样式 */
+        &::before {
+            content   : '';
+            position  : absolute;
+            bottom    : 0;
+            right     : 0;
+            width     : 15px;
+            height    : 15px;
+            background: linear-gradient(-45deg, white 50%, transparent 0);
+        }
+    }
+}
+
+.slider2 {
+    .range-picker {
+        position: absolute;
+        left    : 0;
+        bottom  : 10px;
+        width   : 100%;
+    }
+}

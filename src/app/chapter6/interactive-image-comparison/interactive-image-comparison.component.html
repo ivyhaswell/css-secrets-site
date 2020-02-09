@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="image-slider slider1">
+        <div class="cover">
+            <img src="assets/before.jfif" alt="">
+        </div>
+        <img src="assets/after.jfif" alt="">
+    </div>
+
+    <div class="image-slider slider2">
+        <div class="cover" [ngStyle]="{'width': range+'%'}">
+            <img src="assets/before.jfif" alt="">
+        </div>
+        <img src="assets/after.jfif" alt="">
+        <div class="range-picker">
+            <nz-slider [(ngModel)]="range"></nz-slider>
+        </div>
+    </div>
+</div>
+
+<app-highlight-code [code]='code'></app-highlight-code>
