@@ -1,0 +1,20 @@
+/* 此组件设置了encapsulation为None，避免样式影响其他组件，加一个className在外层 */
+.de-emphasize-container {
+
+    /* 因为antd重置了dialog的样式，所以在这里需要重新设置一下 */
+    dialog:not([open]) {
+        display: none;
+    }
+
+    dialog::backdrop {
+        background: transparent;
+    }
+}
+
+/* 
+    这个是会设置到app.component组件的样式，每次dialog切换状态时也会通过service在
+    外层添加或移除这个className 
+*/
+main.de-emphasized {
+    filter: blur(5px);
+}

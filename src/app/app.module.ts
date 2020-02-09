@@ -50,6 +50,7 @@ import { PickingTheRightCursorComponent } from './chapter6/picking-the-right-cur
 import { ExtendingTheClickableAreaComponent } from './chapter6/extending-the-clickable-area/extending-the-clickable-area.component';
 import { CustomCheckboxesComponent } from './chapter6/custom-checkboxes/custom-checkboxes.component';
 import { DeEmphasizeByDimmingComponent } from './chapter6/de-emphasize-by-dimming/de-emphasize-by-dimming.component';
+import { DeEmphasizeByBlurringComponent } from './chapter6/de-emphasize-by-blurring/de-emphasize-by-blurring.component';
 
 registerLocaleData(en);
 
@@ -105,6 +106,7 @@ export function getHighlightLanguages() {
     ExtendingTheClickableAreaComponent,
     CustomCheckboxesComponent,
     DeEmphasizeByDimmingComponent,
+    DeEmphasizeByBlurringComponent,
   ],
   imports: [
     BrowserModule,
