@@ -1,0 +1,33 @@
+ section {
+     width     : 500px;
+     margin    : 2em;
+     background: white;
+ }
+
+ table {
+     border-collapse: collapse;
+     margin-bottom  : 1em;
+     width          : 100%;
+ }
+
+ section+section table {
+     /* 
+        table-layout的默认值是auto，其行为模式被称为自动表格布局算法。如果将其设置为fixed，
+        则这个值得行为会明显可控一些，将更多得控制权交给了开发者，少部分留给渲染引擎。我们设置
+        得宽度样式会直接起作用，而不仅仅被视为一种提示；同时，溢出行为与其他元素行为也是一样得。
+        因此表格得内容将只能影响表格行的高度了。
+        https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout
+    */
+     table-layout: fixed
+ }
+
+ td {
+     border: 1px solid #aaa;
+ }
+
+ td.preformatted {
+     white-space  : pre;
+     font-family  : Consolas, Monaco, monospace;
+     text-overflow: ellipsis;
+     overflow     : hidden;
+ }
