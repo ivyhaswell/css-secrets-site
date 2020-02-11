@@ -1,0 +1,28 @@
+article {
+    border       : 1px solid silver;
+    border-radius: 6px;
+    margin       : 20px;
+    padding      : 20px;
+    width        : 50%;
+
+    figure {
+        margin: auto;
+        /* 提供回退样式 */
+        max-width: 300px;
+        /* 
+            CSS3中新增了min-content和max-content用来做自适应内容宽高样式 
+            https://developer.mozilla.org/en-US/docs/Glossary/Intrinsic_Size
+            min-content将解析为这个容器内部最大的不可断行的元素的宽度。            
+        */
+        max-width: min-content;
+
+        figcaption {
+            color: silver;
+        }
+
+        img {
+            max-width: inherit;
+        }
+    }
+
+}

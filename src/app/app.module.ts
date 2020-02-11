@@ -54,6 +54,7 @@ import { DeEmphasizeByBlurringComponent } from './chapter6/de-emphasize-by-blurr
 import { ScrollingHintsComponent } from './chapter6/scrolling-hints/scrolling-hints.component';
 import { InteractiveImageComparisonComponent } from './chapter6/interactive-image-comparison/interactive-image-comparison.component';
 import { Chapter7Component } from './chapter7/chapter7.component';
+import { IntrinsicSizingComponent } from './chapter7/intrinsic-sizing/intrinsic-sizing.component';
 
 registerLocaleData(en);
 
@@ -113,6 +114,7 @@ export function getHighlightLanguages() {
     ScrollingHintsComponent,
     InteractiveImageComparisonComponent,
     Chapter7Component,
+    IntrinsicSizingComponent,
   ],
   imports: [
     BrowserModule,
