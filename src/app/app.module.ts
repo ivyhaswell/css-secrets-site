@@ -57,6 +57,7 @@ import { Chapter7Component } from './chapter7/chapter7.component';
 import { IntrinsicSizingComponent } from './chapter7/intrinsic-sizing/intrinsic-sizing.component';
 import { TamingTableColumnWidthComponent } from './chapter7/taming-table-column-width/taming-table-column-width.component';
 import { StylingBySiblingCountComponent } from './chapter7/styling-by-sibling-count/styling-by-sibling-count.component';
+import { FluidBackgroundFixedContentComponent } from './chapter7/fluid-background-fixed-content/fluid-background-fixed-content.component';
 
 registerLocaleData(en);
 
@@ -119,6 +120,7 @@ export function getHighlightLanguages() {
     IntrinsicSizingComponent,
     TamingTableColumnWidthComponent,
     StylingBySiblingCountComponent,
+    FluidBackgroundFixedContentComponent,
   ],
   imports: [
     BrowserModule,
