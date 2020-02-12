@@ -60,6 +60,7 @@ import { StylingBySiblingCountComponent } from './chapter7/styling-by-sibling-co
 import { FluidBackgroundFixedContentComponent } from './chapter7/fluid-background-fixed-content/fluid-background-fixed-content.component';
 import { VerticalCenteringComponent } from './chapter7/vertical-centering/vertical-centering.component';
 import { StickyFootersComponent } from './chapter7/sticky-footers/sticky-footers.component';
+import { Chapter8Component } from './chapter8/chapter8.component';
 
 registerLocaleData(en);
 
@@ -125,6 +126,7 @@ export function getHighlightLanguages() {
     FluidBackgroundFixedContentComponent,
     VerticalCenteringComponent,
     StickyFootersComponent,
+    Chapter8Component,
   ],
   imports: [
     BrowserModule,

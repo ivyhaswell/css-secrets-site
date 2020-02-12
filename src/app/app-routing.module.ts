@@ -7,6 +7,7 @@ import { Chapter4Component } from './chapter4/chapter4.component';
 import { Chapter5Component } from './chapter5/chapter5.component';
 import { Chapter6Component } from './chapter6/chapter6.component';
 import { Chapter7Component } from './chapter7/chapter7.component';
+import { Chapter8Component } from './chapter8/chapter8.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: '05', component: Chapter5Component },
   { path: '06', component: Chapter6Component },
   { path: '07', component: Chapter7Component },
+  { path: '08', component: Chapter8Component },
 ];
 
 @NgModule({
