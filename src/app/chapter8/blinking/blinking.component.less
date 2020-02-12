@@ -1,0 +1,34 @@
+@keyframes blink-smooth {
+    to {
+        color: transparent;
+    }
+}
+
+@keyframes blink-smooth2 {
+    50% {
+        color: transparent;
+    }
+}
+
+.cube1 {
+    animation: 1s blink-smooth infinite;
+}
+
+.cube2 {
+    animation: 1s blink-smooth2 infinite;
+}
+
+.cube3 {
+    animation: .5s blink-smooth infinite;
+    /* 
+        反转函数周期，这样就不需要用50%来完成渐隐+渐显做过渡 
+        alternate 第偶数个周期反转，
+        alternate-reverse 奇数个周期反转
+        reverse 每一个周期反转
+    */
+    animation-direction: alternate;
+}
+
+.cube4 {
+    animation: 1s blink-smooth2 infinite steps(1);
+}
