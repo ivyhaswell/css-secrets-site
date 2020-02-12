@@ -8,9 +8,11 @@ import { Chapter5Component } from './chapter5/chapter5.component';
 import { Chapter6Component } from './chapter6/chapter6.component';
 import { Chapter7Component } from './chapter7/chapter7.component';
 import { Chapter8Component } from './chapter8/chapter8.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: '01', component: Chapter1Component },
   { path: '02', component: Chapter2Component },
   { path: '03', component: Chapter3Component },
@@ -19,6 +21,7 @@ const routes: Routes = [
   { path: '06', component: Chapter6Component },
   { path: '07', component: Chapter7Component },
   { path: '08', component: Chapter8Component },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

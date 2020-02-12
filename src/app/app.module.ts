@@ -67,6 +67,7 @@ import { BlinkingComponent } from './chapter8/blinking/blinking.component';
 import { TypingAnimationComponent } from './chapter8/typing-animation/typing-animation.component';
 import { SmoothStateAnimationsComponent } from './chapter8/smooth-state-animations/smooth-state-animations.component';
 import { AnimationAlongACircularPathComponent } from './chapter8/animation-along-a-circular-path/animation-along-a-circular-path.component';
+import { HomeComponent } from './home/home.component';
 
 registerLocaleData(en);
 
@@ -139,6 +140,7 @@ export function getHighlightLanguages() {
     TypingAnimationComponent,
     SmoothStateAnimationsComponent,
     AnimationAlongACircularPathComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
