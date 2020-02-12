@@ -59,6 +59,7 @@ import { TamingTableColumnWidthComponent } from './chapter7/taming-table-column-
 import { StylingBySiblingCountComponent } from './chapter7/styling-by-sibling-count/styling-by-sibling-count.component';
 import { FluidBackgroundFixedContentComponent } from './chapter7/fluid-background-fixed-content/fluid-background-fixed-content.component';
 import { VerticalCenteringComponent } from './chapter7/vertical-centering/vertical-centering.component';
+import { StickyFootersComponent } from './chapter7/sticky-footers/sticky-footers.component';
 
 registerLocaleData(en);
 
@@ -123,6 +124,7 @@ export function getHighlightLanguages() {
     StylingBySiblingCountComponent,
     FluidBackgroundFixedContentComponent,
     VerticalCenteringComponent,
+    StickyFootersComponent,
   ],
   imports: [
     BrowserModule,
