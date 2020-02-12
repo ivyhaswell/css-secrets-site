@@ -24,26 +24,11 @@
         transition: 0.5s linear;
 
         &:first-child:nth-last-child(1),
-        &:first-child:nth-last-child(1)~li {
-            .option-bar {
-                font-size: 14px;
-            }
-        }
-
+        &:first-child:nth-last-child(1)~li,
         &:first-child:nth-last-child(2),
-        &:first-child:nth-last-child(2)~li {
-            .option-bar {
-                font-size: 14px;
-            }
-        }
-
+        &:first-child:nth-last-child(2)~li,
         &:first-child:nth-last-child(3),
-        &:first-child:nth-last-child(3)~li {
-            .option-bar {
-                font-size: 14px;
-            }
-        }
-
+        &:first-child:nth-last-child(3)~li,
         &:first-child:nth-last-child(4),
         &:first-child:nth-last-child(4)~li {
             .option-bar {
@@ -65,17 +50,11 @@
             border-radius   : 0 0 8px 8px;
             font-size       : 0;
 
-            // .select-n-child(@n) {
-
-            //     &:first-child:nth-last-child(@n),
-            //     &:first-child:nth-last-child(@n)~li {
-            //         font-size: 20px;
-            //     }
-            // }
-
             span {
-                color    : white;
-                font-size: inherit;
+                color      : white;
+                font-size  : inherit;
+                cursor     : pointer;
+                user-select: none;
 
                 &::before {
                     font-size       : 20px;
@@ -89,9 +68,6 @@
                     vertical-align  : middle;
                     margin-right    : 5px;
                 }
-
-                // .select-n-child(4);
-
 
                 &.add {
                     &::before {
