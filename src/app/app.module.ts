@@ -56,6 +56,7 @@ import { InteractiveImageComparisonComponent } from './chapter6/interactive-imag
 import { Chapter7Component } from './chapter7/chapter7.component';
 import { IntrinsicSizingComponent } from './chapter7/intrinsic-sizing/intrinsic-sizing.component';
 import { TamingTableColumnWidthComponent } from './chapter7/taming-table-column-width/taming-table-column-width.component';
+import { StylingBySiblingCountComponent } from './chapter7/styling-by-sibling-count/styling-by-sibling-count.component';
 
 registerLocaleData(en);
 
@@ -117,6 +118,7 @@ export function getHighlightLanguages() {
     Chapter7Component,
     IntrinsicSizingComponent,
     TamingTableColumnWidthComponent,
+    StylingBySiblingCountComponent,
   ],
   imports: [
     BrowserModule,

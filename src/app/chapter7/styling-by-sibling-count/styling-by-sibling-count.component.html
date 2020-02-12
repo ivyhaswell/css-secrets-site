@@ -1,0 +1,13 @@
+<ul class="todo">
+    <li *ngFor="let item of listItems">
+        <div class="option-bar">
+            <span class="add">add color</span>
+            <span class="delete">delete color</span>
+        </div>
+    </li>
+</ul>
+
+<button (click)='increase()' class="append">添加项</button>
+<button (click)='decrease()' class="append">减少项</button>
+
+<app-highlight-code [code]='code'></app-highlight-code>''

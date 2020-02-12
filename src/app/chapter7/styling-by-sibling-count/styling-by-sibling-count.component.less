@@ -1,0 +1,144 @@
+/** 
+    如何针对不同长度子元素写样式，比如说4个元素的时候的样式 
+    首先回顾一下对应的选择器：
+    only-child 只有一个元素的时候选中
+    first-child/last-child 第一个/最后一个
+    nth-last-child(n) 倒数第n个
+    ~ li 后面的兄弟li元素
+    所以如果列表恰好有n项，第一项的选择器是:
+    li:first-child:nth-last-child(n)
+    选中所有的n项:
+    li:first-child:nth-last-child(n),
+    li:first-child:nth-last-child(n) ~ li
+*/
+
+.todo {
+    display: flex;
+    width  : 1000px;
+
+    li {
+        flex      : 1;
+        list-style: none;
+        height    : 200px;
+        position  : relative;
+        transition: 0.5s linear;
+
+        &:first-child:nth-last-child(1),
+        &:first-child:nth-last-child(1)~li {
+            .option-bar {
+                font-size: 14px;
+            }
+        }
+
+        &:first-child:nth-last-child(2),
+        &:first-child:nth-last-child(2)~li {
+            .option-bar {
+                font-size: 14px;
+            }
+        }
+
+        &:first-child:nth-last-child(3),
+        &:first-child:nth-last-child(3)~li {
+            .option-bar {
+                font-size: 14px;
+            }
+        }
+
+        &:first-child:nth-last-child(4),
+        &:first-child:nth-last-child(4)~li {
+            .option-bar {
+                font-size: 14px;
+            }
+        }
+
+        .option-bar {
+            position        : absolute;
+            top             : 0;
+            left            : 10px;
+            height          : 50px;
+            width           : calc(100% - 20px);
+            display         : flex;
+            justify-content : space-between;
+            align-items     : center;
+            padding         : 0 8px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius   : 0 0 8px 8px;
+            font-size       : 0;
+
+            // .select-n-child(@n) {
+
+            //     &:first-child:nth-last-child(@n),
+            //     &:first-child:nth-last-child(@n)~li {
+            //         font-size: 20px;
+            //     }
+            // }
+
+            span {
+                color    : white;
+                font-size: inherit;
+
+                &::before {
+                    font-size       : 20px;
+                    width           : 20px;
+                    height          : 20px;
+                    line-height     : 18px;
+                    border-radius   : 50%;
+                    text-align      : center;
+                    background-color: white;
+                    display         : inline-block;
+                    vertical-align  : middle;
+                    margin-right    : 5px;
+                }
+
+                // .select-n-child(4);
+
+
+                &.add {
+                    &::before {
+                        content: '+';
+                        color  : green;
+                    }
+                }
+
+                &.delete {
+                    &::before {
+                        content: '×';
+                        color  : red;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(n+1) {
+            background-color: #f5222d;
+        }
+
+        &:nth-child(n+2) {
+            background-color: #fa541c;
+        }
+
+        &:nth-child(n+3) {
+            background-color: #fa8c16;
+        }
+
+        &:nth-child(n+4) {
+            background-color: #faad14;
+        }
+
+        &:nth-child(n+5) {
+            background-color: #fadb14;
+        }
+
+        &:nth-child(n+6) {
+            background-color: #a0d911;
+        }
+
+        &:nth-child(n+7) {
+            background-color: #52c41a;
+        }
+
+        &:nth-child(n+8) {
+            background-color: #13c2c2;
+        }
+    }
+}
