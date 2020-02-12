@@ -1,0 +1,69 @@
+/* 用两个元素来做十分简单，只需要相反来转，给外层元素设置圆心为transform-origin即可 */
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.circle {
+    width           : 200px;
+    height          : 200px;
+    background-color: yellow;
+    border-radius   : 50%;
+    margin          : 0 20px;
+    padding         : 10px;
+
+    .avatar {
+        margin: 0 auto;
+        width : min-content;
+
+        img {
+            height       : 50px;
+            width        : 50px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.circle1 {
+    .avatar {
+        animation       : spin 3s infinite linear;
+        transform-origin: 50% 90px;
+
+        img {
+            display  : block;
+            animation: spin 3s infinite reverse linear;
+        }
+    }
+}
+
+/* 
+    用一个元素来实现，transform-origin怎么解决呢？ 
+    “transform-origin只是一个语法糖而已。实际上你总是可以用translate()来代替它。” —— Aryeh Gregor
+    比如transform-origin为100px 50px，变换是旋转30度。可以等效替代为translate 100px 50px，然后旋转
+    30度，之后translate -100px -50px
+    这样一来单元素也可以实现基于多origin的动画变换了
+*/
+@keyframes spin2 {
+
+    /* 下面的translate实际上都是在做坐标系变换这一操作 */
+    from {
+        transform: translateY(90px) translateY(-50%) rotate(0turn) translateY(-90px) translateY(50%) rotate(1turn);
+    }
+
+    to {
+        transform: translateY(90px) translateY(-50%) rotate(1turn) translateY(-90px) translateY(50%) rotate(0turn);
+    }
+}
+
+.circle2 {
+    .avatar {
+        background-image: url(src/assets/Satomi-Ishihara.jpg);
+        background-size : 100%;
+        height          : 50px;
+        width           : 50px;
+        border-radius   : 50%;
+        animation       : spin2 3s infinite linear;
+    }
+}
