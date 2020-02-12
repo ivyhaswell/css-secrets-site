@@ -144,6 +144,7 @@ export function getHighlightLanguages() {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgZorroAntdModule,
     FormsModule,
