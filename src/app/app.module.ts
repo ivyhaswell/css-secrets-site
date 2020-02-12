@@ -64,6 +64,7 @@ import { Chapter8Component } from './chapter8/chapter8.component';
 import { ElasticTransitionsComponent } from './chapter8/elastic-transitions/elastic-transitions.component';
 import { FrameByFrameAnimationsComponent } from './chapter8/frame-by-frame-animations/frame-by-frame-animations.component';
 import { BlinkingComponent } from './chapter8/blinking/blinking.component';
+import { TypingAnimationComponent } from './chapter8/typing-animation/typing-animation.component';
 
 registerLocaleData(en);
 
@@ -133,6 +134,7 @@ export function getHighlightLanguages() {
     ElasticTransitionsComponent,
     FrameByFrameAnimationsComponent,
     BlinkingComponent,
+    TypingAnimationComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-color: currentColor;
+    }
+}
+
+.cube1 {
+    h1 {
+        /* 文本的宽度 */
+        width       : 16ch;
+        overflow    : hidden;
+        white-space : nowrap;
+        animation   : typing 6s steps(16), caret 1s steps(1) infinite;
+        border-right: 1px solid transparent;
+        font-family : Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    }
+}
