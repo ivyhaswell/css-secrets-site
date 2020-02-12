@@ -1,0 +1,37 @@
+@keyframes panoramic {
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.cube {
+    width           : 150px;
+    height          : 150px;
+    background-image: url(src/assets/animals.jpg);
+    background-size : auto 100%;
+}
+
+.cube1 {
+    /* 移动背景位置，偶数回反转动画，就可以来回显示全景图片 */
+    animation: panoramic 6s linear infinite alternate;
+}
+
+.cube2 {
+
+    &:hover,
+    &:focus {
+        /* 改为在鼠标悬浮的时候才播放，但是有个问题就是鼠标一旦离开，图片马上回到了原点 */
+        animation: panoramic 6s linear infinite alternate;
+    }
+}
+
+.cube3 {
+    /* 转换一下思路，动画并不是在hover状态播放，而是非hover时暂停动画 */
+    animation           : panoramic 6s linear infinite alternate;
+    animation-play-state: paused;
+
+    &:hover,
+    &:focus {
+        animation-play-state: running;
+    }
+}
