@@ -61,6 +61,7 @@ import { FluidBackgroundFixedContentComponent } from './chapter7/fluid-backgroun
 import { VerticalCenteringComponent } from './chapter7/vertical-centering/vertical-centering.component';
 import { StickyFootersComponent } from './chapter7/sticky-footers/sticky-footers.component';
 import { Chapter8Component } from './chapter8/chapter8.component';
+import { ElasticTransitionsComponent } from './chapter8/elastic-transitions/elastic-transitions.component';
 
 registerLocaleData(en);
 
@@ -127,6 +128,7 @@ export function getHighlightLanguages() {
     VerticalCenteringComponent,
     StickyFootersComponent,
     Chapter8Component,
+    ElasticTransitionsComponent,
   ],
   imports: [
     BrowserModule,

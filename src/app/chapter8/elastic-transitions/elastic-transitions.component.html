@@ -1,0 +1,27 @@
+<div class="container">
+    <div [ngClass]="['playground' ,className]" *ngFor="let className of classNames;let i=index;">
+        <div class="ball"></div>
+        <button (click)="replay(i)" class="replay">replay</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="cube cube1">
+        <label for="">Your name</label>
+        <input type="text">
+        <div class="callout">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, modi.</div>
+    </div>
+    <div class="cube cube2">
+        <label for="">Your name</label>
+        <input type="text">
+        <div class="callout">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, modi.</div>
+    </div>
+    <div class="cube cube3">
+        <label for="">Your name</label>
+        <input type="text">
+        <div class="callout">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, modi.</div>
+    </div>
+</div>
+
+
+<app-highlight-code [code]='code'></app-highlight-code>

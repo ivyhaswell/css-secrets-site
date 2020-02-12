@@ -1,0 +1,147 @@
+@grassheight: 10px;
+@bottom     : 410px;
+@transheight: @bottom - @grassheight;
+@ballwidth  : 50px;
+
+.playground {
+
+    background: linear-gradient(to top, lightgreen, lightgreen @grassheight, rgba(250, 250, 255) @grassheight, lightblue);
+    width     : 60px;
+    height    : calc(10px + @bottom + @ballwidth);
+    position  : relative;
+    margin    : 0 20px 40px;
+
+    @keyframes bounce {
+
+        60%,
+        80%,
+        to {
+            transform: translateY(@transheight);
+        }
+
+        70% {
+            transform: translateY(calc(@transheight - 100px));
+        }
+
+        90% {
+            transform: translateY(calc(@transheight - 50px));
+        }
+    }
+
+    .ball {
+        width           : 50px;
+        height          : 50px;
+        border-radius   : 50%;
+        background-color: tomato;
+        position        : absolute;
+        bottom          : @bottom;
+        left            : 5px;
+        background-image: radial-gradient(circle at 30% 30%, white, transparent 50%);
+        animation       : bounce 3s;
+    }
+
+    .replay {
+        position : absolute;
+        bottom   : 0;
+        left     : 50%;
+        transform: translate(-50%, calc(~'100% + 10px'));
+    }
+}
+
+.playground1 {}
+
+.playground2 {
+    @keyframes bounce2 {
+
+        60%,
+        80%,
+        to {
+            transform                : translateY(@transheight);
+            animation-timing-function: ease-out;
+        }
+
+        70% {
+            transform: translateY(calc(@transheight - 100px));
+        }
+
+        90% {
+            transform: translateY(calc(@transheight - 40px));
+        }
+    }
+
+    .ball {
+        animation: bounce2 3s ease-in;
+    }
+}
+
+
+.playground3 {
+    @keyframes bounce3 {
+
+        60%,
+        80%,
+        to {
+            transform                : translateY(@transheight);
+            animation-timing-function: ease;
+        }
+
+        70% {
+            transform: translateY(calc(@transheight - 100px));
+        }
+
+        90% {
+            transform: translateY(calc(@transheight - 40px));
+        }
+    }
+
+    .ball {
+        animation: bounce3 3s cubic-bezier(0.1, 0.25, 1, 0.25);
+    }
+}
+
+.cube {
+    border       : 1px solid silver;
+    border-radius: 4px;
+    height       : auto;
+    padding      : 20px 10px 50px;
+
+    label {
+        display: block;
+    }
+
+    input {
+        border    : 1px solid silver;
+        margin-top: 5px;
+        padding   : 0 5px;
+    }
+
+    input:not(:focus)+.callout {
+        transform: scale(0);
+    }
+
+    .callout {
+        transform-origin: left top;
+        transition      : 0.5s cubic-bezier(0.25, 0.1, 0.3, 1.5);
+        width           : 100%;
+        padding         : 10px 5px;
+        border          : 1px solid gray;
+        border-radius   : 6px;
+        background-color: lightsalmon;
+    }
+}
+
+.cube1 {}
+
+.cube2 {
+    input:not(:focus)+.callout {
+        /* 避免收回时元素反向延伸 */
+        transition-timing-function: ease;
+    }
+}
+
+.cube3 {
+    input:not(:focus)+.callout {
+        /* 修改时间为0.25s，使收起的视觉效果看起来速度与展开接近（因为展开时只用了一半的时间到100%） */
+        transition: 0.25s;
+    }
+}
