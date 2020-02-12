@@ -1,0 +1,87 @@
+@loading_wrap_length: 100px;
+@loading_length     : @loading_wrap_length * 0.8;
+@bar_width          : @loading_length/10;
+@bar_height         : @loading_length/4;
+
+.loading {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    border-radius   : 10%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width           : 100px;
+    height          : 100px;
+
+    .chrysanthemum {
+
+        width   : @loading_length;
+        height  : @loading_length;
+        position: relative;
+
+        @keyframes loop {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        animation: loop 1s linear infinite;
+
+        .bar {
+            width           : @bar_width;
+            height          : @bar_height;
+            position        : absolute;
+            top             : 0;
+            left            : calc(50% - @bar_width/2);
+            border-radius   : @bar_width;
+            transform-origin: 50% calc(100% + @loading_length/2 - @bar_height);
+        }
+
+        .bar:nth-child(1) {
+            background-color: hsla(0, 0%, 100%, 100%);
+        }
+
+        .bar:nth-child(2) {
+            background-color: hsla(0, 0%, 100%, 90%);
+            transform       : rotate(-45deg);
+        }
+
+        .bar:nth-child(3) {
+            background-color: hsla(0, 0%, 100%, 80%);
+            transform       : rotate(-90deg);
+        }
+
+        .bar:nth-child(4) {
+            background-color: hsla(0, 0%, 100%, 70%);
+            transform       : rotate(-135deg);
+        }
+
+        .bar:nth-child(5) {
+            background-color: hsla(0, 0%, 100%, 60%);
+            transform       : rotate(-180deg);
+        }
+
+        .bar:nth-child(6) {
+            background-color: hsla(0, 0%, 100%, 50%);
+            transform       : rotate(-225deg);
+        }
+
+        .bar:nth-child(7) {
+            background-color: hsla(0, 0%, 100%, 40%);
+            transform       : rotate(-270deg);
+        }
+
+        .bar:nth-child(8) {
+            background-color: hsla(0, 0%, 100%, 30%);
+            transform       : rotate(-315deg);
+        }
+    }
+}
+
+.cube2 {
+    .loading {
+        .chrysanthemum {
+            /* steps会根据指定的步进数量，把整个动画切分为多帧，而且整个动画会在帧与帧之间硬切 */
+            animation-timing-function: steps(8);
+        }
+    }
+}
