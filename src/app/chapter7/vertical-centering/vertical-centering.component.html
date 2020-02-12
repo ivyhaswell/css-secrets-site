@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="cube cube1">
+        <div class="content"></div>
+    </div>
+    <div class="cube cube2" [class.fixed]='cube2_fixed'>
+        <div class="content" (click)='toggleCube2Fixed()'>click me</div>
+    </div>
+    <div class="cube cube3">
+        <div class="content"></div>
+    </div>
+    <div class="cube cube3">
+        <div class="content"></div>
+    </div>
+</div>
+
+<app-highlight-code [code]='code'></app-highlight-code>
