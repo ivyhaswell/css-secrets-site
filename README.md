@@ -1,27 +1,40 @@
 # CssSecretsTestSite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
+这个项目主要是在阅读《CSS Secrets》一书中，将书中讲解的每个例子都实现一遍以作练习。
 
-## Development server
+项目使用`angular-cli`搭建而成，代码高亮通过`ngx-highlightjs`实现，组件库使用`ng-zorro`。
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+根据书的内容，项目主要分为了8个主要的组件/页面：
+- 第1章 引言
+- 第2章 背景与边框
+- 第3章 形状
+- 第4章 视觉效果
+- 第5章 字体排印
+- 第6章 用户体验
+- 第7章 结构与布局
+- 第8章 过渡与动画
 
-## Code scaffolding
+每个页面有相应的代码，关键实现的讲解在代码注释中，后续可能会调整。
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 安装依赖项
+```
+yarn 
+```
 
-## Build
+## 启动开发服务器
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+ng serve
+```
 
-## Running unit tests
+## 打包
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng build
+```
 
-## Running end-to-end tests
+生产包
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+ng build --prod
+```
